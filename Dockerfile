@@ -3,8 +3,9 @@ FROM cm2network/steamcmd:steam
 USER root
 
 RUN set -x \
+	&& dpkg --add-architecture i386 \
 	&& apt-get update \
-	&& apt-get install -y --no-install-recommends --no-install-suggests bzip2 curl cron lsof libc6-i386 lib32gcc1 perl-modules sudo \
+	&& apt-get install -y --no-install-recommends --no-install-suggests bzip2 curl cron lsof libc6-i386 libcompress-raw-zlib-perl lib32gcc1 perl-modules sudo \
 	&& apt-get remove --purge -y \
 	&& apt-get clean autoclean \
 	&& apt-get autoremove -y \
