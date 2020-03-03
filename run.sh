@@ -12,6 +12,7 @@ echo "##########################################################################
 
 echo "Ensuring correct permissions..."
 sudo chown steam:steam -R /ark 
+sudo chown steam:steam -R /home/steam 
 
 # Remove arkmanager tracking files if they exist
 # They can cause issues with starting the server multiple times
