@@ -40,8 +40,7 @@ ENV am_ark_SessionName="Ark Server" \
     am_ark_QueryPort=27015 \
     am_ark_Port=7778 \
     am_ark_RCONPort=32330 \
-    am_arkwarnminutes=15 \
-	am_steamcmdroot=/home/steam/steamcmd
+    am_arkwarnminutes=15
 
 VOLUME /ark
 
