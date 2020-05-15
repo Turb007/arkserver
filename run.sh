@@ -125,17 +125,18 @@ fi
 
 function stop {
 	arkmanager stop
-	exit 0
+	exit
 }
 
-# Stop server in case of signal INT or TERM
-trap stop INT
-trap stop TERM
+
 
 # TODO: Provide IF statement here with ENV variable
 # to allow server logs to be scraped from RCON to stdout
 # bash -c ./log.sh &
 
-arkmanager start --no-background --verbose &
-arkmanpid=$!
-wait $arkmanpid
+arkmanager start
+
+# Stop server in case of signal INT or TERM
+trap stop INT
+trap stop TERM
+wait
